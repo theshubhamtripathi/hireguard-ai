@@ -1,123 +1,87 @@
-# HireGuard AI — Fake Job Detection System 🤖
+# 🛡️ HireGuard AI — Fake Job Detection System
+
+![Python](https://img.shields.io/badge/Python-3.9+-blue)
+![Scikit-learn](https://img.shields.io/badge/Scikit--learn-ML-orange)
+![Streamlit](https://img.shields.io/badge/Streamlit-Deployed-red)
+
+## 🔴 Live Demo
+👉 **[Try HireGuard AI Live](https://hireguard-ai-rycyp56qemupft4gh4jekf.streamlit.app)**
 
 ## 📌 Overview
+HireGuard AI is a machine learning system that detects fraudulent 
+job postings using Natural Language Processing (NLP). 
+It helps job seekers identify scams before they become victims.
 
-HireGuard AI is a machine learning-based system that detects fraudulent job postings using Natural Language Processing (NLP). It helps users identify scams in online job listings.
-
----
-
-## 🎯 Problem Statement
-
-Fake job postings are increasing on platforms like LinkedIn and Indeed, leading to fraud and data theft.
-
----
+## 🎯 Problem
+Fake job postings are increasing on platforms like LinkedIn and 
+Indeed, leading to financial fraud and personal data theft.
 
 ## 💡 Solution
-
-This system classifies job descriptions as:
-
-* ✅ Real
-* ❌ Fake
-
----
+Paste any job posting and get instant AI analysis:
+- ✅ Real or Fake prediction
+- 📊 Confidence score
+- 🔎 Suspicious keyword detection
+- 💡 Safety tips
 
 ## 🛠️ Tech Stack
+- **Python** — core language
+- **Pandas & NumPy** — data processing
+- **Scikit-learn** — ML model (Logistic Regression)
+- **TF-IDF Vectorizer** — text to numbers
+- **NLTK** — text preprocessing
+- **Streamlit** — web app deployment
 
-* Python
-* Pandas, NumPy
-* Scikit-learn
-* TF-IDF Vectorizer
-* Streamlit (UI)
+## 🧠 How It Works
+```
+Raw Job Text
+     ↓
+Text Cleaning (lowercase, remove URLs, stopwords)
+     ↓
+TF-IDF Vectorization (text → 10,000 numbers)
+     ↓
+Logistic Regression Model
+     ↓
+Prediction → Real / Fake + Confidence Score
+```
 
----
+## 📊 Model Performance
+| Metric | Real | Fake |
+|--------|------|------|
+| Precision | 0.99 | 0.79 |
+| Recall | 0.97 | 0.92 |
+| F1-Score | 0.98 | 0.85 |
 
-## 🧠 Model Architecture
+> Fake Recall of 92% means the model catches 92 out of 
+> every 100 fake job postings.
 
-Raw Text
-↓
-Text Preprocessing
-↓
-Feature Extraction (TF-IDF)
-↓
-ML Model (Logistic Regression / Naive Bayes)
-↓
-Prediction (Real / Fake)
-
----
-
-## 📂 Folder Structure
-
+## 📂 Project Structure
 ```
 hireguard-ai/
-│── data/
-│── notebooks/
-│── model/
-│── app/
-│── utils/
-│── main.py
+├── data/                    # dataset
+├── model/                   # saved model files
+├── notebooks/               # exploration notebook
+├── utils/
+│   └── preprocess.py        # text cleaning functions
+├── train.py                 # model training script
+├── app.py                   # Streamlit web app
+└── requirements.txt         # dependencies
 ```
 
----
-
-## ⚙️ Installation
-
-1. Clone:
-
-```
-git clone https://github.com/your-username/hireguard-ai.git
-```
-
-2. Install dependencies:
-
-```
+## ⚙️ Run Locally
+```bash
+git clone https://github.com/theshubhamtripathi/hireguard-ai.git
+cd hireguard-ai
+python -m venv venv
+source venv/bin/activate
 pip install -r requirements.txt
-```
-
-3. Run app:
-
-```
+python train.py
 streamlit run app.py
 ```
 
----
-
-## 📊 Dataset
-
-* Fake Job Posting Dataset (Kaggle)
-
----
-
-## 📈 Features
-
-* Text classification
-* Confidence score
-* Highlight suspicious keywords
+## 🚀 Future Improvements
+- BERT model for better semantic understanding
+- Browser extension for real-time detection
+- Integration with LinkedIn and Indeed APIs
 
 ---
-
-## 🧠 Key Learnings
-
-* NLP fundamentals
-* Feature engineering (TF-IDF)
-* Model evaluation (Accuracy, Precision, Recall)
-* Deployment using Streamlit
-
----
-
-## 🚀 Future Scope
-
-* Use BERT for better accuracy
-* Browser extension for real-time detection
-* Integration with job platforms
-
----
-
-## 📸 Demo
-
-(Add GIF/video later)
-
----
-
-## 🤝 Contribution
-
-Suggestions and improvements are welcome!
+Made with ❤️ by Shubham Tripathi

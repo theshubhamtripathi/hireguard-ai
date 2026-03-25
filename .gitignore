@@ -4,4 +4,3 @@ __pycache__/
 .DS_Store
 *.ipynb_checkpoints
 .env
-model/*.pkl
